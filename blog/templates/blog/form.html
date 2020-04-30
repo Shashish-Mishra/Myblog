@@ -1,0 +1,116 @@
+{% extends 'blog/basic.html' %}
+
+{% block head %}
+
+    <style>
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+
+{%  block title %}
+    POST
+{%  endblock %}
+
+{% endblock %}
+
+{% block body %}
+
+
+    <form method="post" action="/">{% csrf_token %}
+
+    <div class="container mt-5 ml-5 mb-5">
+
+        <div class="content-sidebar-wrap"><main class="content" id="genesis-content">
+            <article class="post-380 page type-page status-publish entry"><header class="entry-header">
+                <h1 class="entry-title" align="center"><em><u>Write Your Blog Here..</u></em></h1>
+
+  <div class="form-group">
+    <label for="inputAddress">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Write your title here" name="title">
+  </div>
+
+  <div class="form-group">
+    <label for="inputAddress">Heading 0</label>
+    <input type="text" class="form-control" id="head0" placeholder="Main Heading" name="head0">
+  </div>
+
+  <div class="form-group">
+    <label for="inputAddress2">Content 0</label>
+    <input type="text" class="form-control" id="chead0" placeholder="Content of Main Heading" name="chead0">
+  </div>
+
+<div class="form-group">
+    <label for="inputAddress">Heading 1</label>
+    <input type="text" class="form-control" id="head1" placeholder="First Sub-Heading" name="head1">
+  </div>
+
+  <div class="form-group">
+    <label for="inputAddress">Content 1</label>
+    <input type="text" class="form-control" id="chead1" placeholder="Content of first Sub-heading" name="chead1">
+  </div>
+
+  <div class="form-group">
+    <label for="inputAddress2">Heading 2</label>
+    <input type="text" class="form-control" id="head2" placeholder="Second Sub-heading" name="head2">
+  </div>
+
+<div class="form-group">
+    <label for="inputAddress">Content 2</label>
+    <input type="text" class="form-control" id="chead2" placeholder="Content of Second Sub-heading" name="chead2">
+  </div>
+
+
+  <div class="form-group">
+    <label for="inputAddress2">Author</label>
+    <input type="text" class="form-control" id="author" placeholder="Write your name" name="author">
+  </div>
+
+
+
+                <!--
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+
+  -->
+
+  <button type="submit" class="btn btn-primary">POST</button>
+</form>
+
+
+
+    </div>
+
+    </div>
+
+
+
+{% endblock %}
